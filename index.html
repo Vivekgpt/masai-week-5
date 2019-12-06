@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="index.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body class="container">
+        <div class="d-flex justify-content-around mt-5">
+            <div class="col-3">
+                <img src="https://static.lootcrate.com/yrk2x9n6p9s5/7qe1Eupm4acN9PffLD5WLw/3586f3356d4526cfd964b8dfed7f9887/slide-1-OptA.gif" height="100%" width="100%">
+            </div>
+            <div class="col-5 offset-3">
+                <h1 class=" display-2 text-danger font-weight-bold"><u>Rick & Morty</u></h1>
+            </div>
+            <div id="leftimg" class="col-2">
+                <img src="https://media1.giphy.com/media/RGrbmiiFDwpjO/source.gif" height="100%" width="100%">
+            </div>
+        </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide container mt-5" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2000">
+                    <img src="https://ewscripps.brightspotcdn.com/dims4/default/c099409/2147483647/strip/true/crop/1024x576+0+224/resize/1280x720!/quality/90/?url=https://ewscripps.brightspotcdn.com/ca/43/c9a7699c468eb129411ef8ebec25/rick-and-morty.jpg" class="d-block w-100 h-75" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="https://i.ytimg.com/vi/s_1lP4CBKOg/maxresdefault.jpg" class="d-block w-100 h-75" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="https://cdn.vox-cdn.com/uploads/chorus_image/image/54035573/rick_morty_s3.0.png" class="d-block w-100 h-75" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="http://hubwav.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-16-at-11.15.17-AM.jpg" class="d-block w-100 h-75" alt="...">
+                </div>
+            </div>
+        </div>
+        <div class="h3 offset-5 mt-5">Search Filter By: </div> 
+        <input id="inputid" class="form-control col-2 mr-sm-2 mt-2 offset-5" type="search" placeholder="Search" aria-label="Search">
+        <small id="error"></small>
+        <select id="choose" class="btn btn-outline-secondary mt-2 offset-5">
+            <option value="chooseany">--Choose any--</option>
+            <option value="?name=">Name</option>
+            <option value="?/">Character</option>
+            <option value="?status=">Status</option>
+            <option value="?species=">Species</option>
+            <option value="?gender=">Gender</option>
+            <option value="?page=">Page</option>
+        </select>
+        <small id="any"></small>
+        <button onclick="getData()" class="btn btn-outline-dark mt-2 ml-2">Search</button>
+        <div class="card-deck">
+            <div class="" id="card1" style="width: 20rem;">
+                <img src="" class="card-img-top" id="pic" alt="">
+                <div class="card-body" id="card2">
+                  <h3 class="name"></h3>
+                  <p class="status"></p>
+                  <p class="species"></p>
+                  <p class="gender"></p>
+                  <!-- <p class="episode"></p> -->
+                  <a href="#" class="url"></a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+}
+
+#headimg{
+    width: 1100px;
+    height: 400px;
+}
+
+.display-2{
+    font-family: 'Bitter', serif;
+    margin-left: -200px;
+}
