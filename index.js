@@ -2,13 +2,15 @@ function getData() {
     var input = document.getElementById("inputid").value;
     var array = document.getElementById("choose").value;
     var xhr  = new XMLHttpRequest();
-    if(input == ""){
+    if((input == "") || (array == "chooseany")){
         document.getElementById("error").innerHTML = "*Please enter a valid value"
-    }
-    if(array == "chooseany"){
         document.getElementById("any").innerHTML = "*Please Choose a Category"
     }
-    var url = "https://rickandmortyapi.com/api/character/" + array + input;
+    else {
+        var url = "https://rickandmortyapi.com/api/character/" + array + input;
+        document.getElementById("error").innerHTML = "";
+        document.getElementById("any").innerHTML = "";
+    }
     xhr.open("GET",url);
     xhr.send();
     xhr.onload = function () {
