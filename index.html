@@ -12,7 +12,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
-    <body background="https://wallpaperset.com/w/full/d/3/b/28666.jpg" class="container">
+    <body background="https://i.pinimg.com/originals/2e/b6/d5/2eb6d539747b3630a247681b2350717a.jpg" class="container">
         <div class="d-flex justify-content-around mt-5">
             <div class="col-3">
                 <img src="https://static.lootcrate.com/yrk2x9n6p9s5/7qe1Eupm4acN9PffLD5WLw/3586f3356d4526cfd964b8dfed7f9887/slide-1-OptA.gif" height="100%" width="100%">
@@ -54,20 +54,22 @@
               <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="h3 offset-5 text-success mt-5">Search Filter By: </div> 
-        <input id="inputid" class="form-control col-2 mr-sm-2 mt-2 offset-5 btn-outline-dark" type="search" placeholder="Search" aria-label="Search">
-        <small id="error"></small>
-        <select id="choose" class="btn btn-outline-success mt-2 offset-5">
-            <option value="chooseany">--Choose any--</option>
-            <option value="?name=">Name</option>
-            <option value="?/">Character</option>
-            <option value="?status=">Status</option>
-            <option value="?species=">Species</option>
-            <option value="?gender=">Gender</option>
-            <option value="?page=">Page</option>
-        </select>
-        <small id="any"></small>
-        <button onclick="getData()" class="btn btn-outline-success mt-2 ml-2">Search</button>
+        <div class="fillbox pb-2 offset-4">
+          <div class="h2 font-weight-bold offset-3 text-warning mt-5">Search Filter By: </div> 
+          <input id="inputid" class="form-control col-4 mt-2 offset-4 btn-outline-dark" type="search" placeholder="Search" aria-label="Search">
+          <p id="error"></p>
+          <select id="choose" class="btn btn-outline-warning mt-2 offset-4">
+              <option value="chooseany">--Choose any--</option>
+              <option value="?name=">Name</option>
+              <option value="?/">Character</option>
+              <option value="?status=">Status</option>
+              <option value="?species=">Species</option>
+              <option value="?gender=">Gender</option>
+              <option value="?page=">Page</option>
+          </select>
+          <p id="any"></p>
+          <button onclick="getData()" class="btn offset-5 btn-outline-warning mt-2">Search</button>
+        </div>
         <div class="card-deck">
             <div class="" id="card1" style="width: 20rem;">
                 <img src="" class="card-img-top" id="pic" alt="">
@@ -76,7 +78,6 @@
                   <p class="status"></p>
                   <p class="species"></p>
                   <p class="gender"></p>
-                  <!-- <p class="episode"></p> -->
                   <a href="#" class="url"></a>
                 </div>
             </div>

@@ -2,9 +2,17 @@ function getData() {
     var input = document.getElementById("inputid").value;
     var array = document.getElementById("choose").value;
     var xhr  = new XMLHttpRequest();
-    if((input == "") || (array == "chooseany")){
+    if((input == "") && (array == "chooseany")){
         document.getElementById("error").innerHTML = "*Please enter a valid value"
         document.getElementById("any").innerHTML = "*Please Choose a Category"
+    }
+    else if(input == ""){
+        document.getElementById("error").innerHTML = "*Please enter a valid value"
+        document.getElementById("any").innerHTML = ""
+    }
+    else if(array == "chooseany"){
+        document.getElementById("any").innerHTML = "*Please Choose a Category"
+        document.getElementById("error").innerHTML = ""
     }
     else {
         var url = "https://rickandmortyapi.com/api/character/" + array + input;
@@ -27,7 +35,6 @@ function getData() {
 
 function showData (data) {
     var card1 = document.getElementById("card1");
-    // var card2 = document.getElementById("card2");
     for (var i = 0; i < data["results"].length; i++){
         var div1 = document.createElement("div");
         var div2 = document.createElement("div");
@@ -36,7 +43,6 @@ function showData (data) {
         var p1 = document.createElement("p");
         var p2 = document.createElement("p");
         var p3 = document.createElement("p");
-        // var p4 = document.createElement("p");
         var a = document.createElement("a");
 
         pic.setAttribute("src", data["results"][i]["image"]);
@@ -44,7 +50,6 @@ function showData (data) {
         p1.innerHTML = data["results"][i]["status"];
         p2.innerHTML = data["results"][i]["species"];
         p3.innerHTML = data["results"][i]["gender"];
-        // p4.innerHTML = data["results"][i]["episode"];
         a.innerHTML = data["results"][i]["url"];
         
         card1.appendChild(div1);
@@ -54,7 +59,6 @@ function showData (data) {
         div2.appendChild(p1);
         div2.appendChild(p2);
         div2.appendChild(p3);
-        // div2.appendChild(p4);
         div2.appendChild(a);
         };
 }
